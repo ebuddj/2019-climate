@@ -1,0 +1,89 @@
+@resultBackground: #f6d55c;
+@h3color: #20639b;
+@h1color: #20639b;
+@backgroundColor: #3caea3;
+
+@unused: #173f5f;
+@unused: #ed553b;
+
+.app {
+  background-color: @backgroundColor;
+  min-height: 100vh;
+  .content {
+    background-color: #fff;
+    margin: auto auto;
+    max-width: 600px;
+    min-height: 100vh;
+    padding: 20px;
+    h1 {
+      color: @h1color;
+      font-family: 'Roboto';
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 50px;
+      margin: 0 0 20px 0;
+    }
+    p {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0 0 20px 0;
+    }
+  }
+  .select_container {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  .result_container {
+    background-color: @resultBackground;
+    padding: 20px;
+    h3 {
+      color: @h3color;
+      font-family: 'Roboto';
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 46px;
+      margin: 0 0 20px 0;
+      text-transform: uppercase;
+    }
+    h4 {
+      font-family: 'Roboto';
+      font-size: 20px;
+      font-weight: 400;
+      font-weight: 600;
+      line-height: 26px;
+      margin: 0 0 20px 0;
+    }
+    p {
+      font-family: 'Open Sans';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0 0 20px 0;
+    }
+    .counter_container {
+      margin: 0 0 20px 0;
+      .counter_value {
+        color: #000;
+        font-family: 'Droid Serif';
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+      }
+    }
+    .line_chart_container,
+    .bar_chart_container {
+      margin-bottom: 20px;
+    }
+    .value {
+      color: #3caea3;
+      font-weight: 600;
+    }
+  }
+}
+
+@import 'basics.less';
