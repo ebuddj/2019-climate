@@ -97,7 +97,7 @@ class Vis extends Component {
           <p>Biggest output comes from <span className={style.value}>{this.state.category.top_name}</span>, total <span className={style.value}><NumberFormat value={this.state.category.top_value} displayType={'text'} thousandSeparator="," suffix={' tons'} decimalScale={0}/></span>.</p>
           <p>In relation to other countries your biggest problem is <span className={style.value}>{this.state.category.top_share_name}</span> where you make up <span className={style.value}><NumberFormat value={(this.state.category.top_share_value) * 100} displayType={'text'} thousandSeparator="," suffix={' percent'} decimalScale={0}/></span> of the emissions.</p>
           <h4>See how other countries are doing</h4>
-          <BarChartElement data={this.state.co2_per_country} className={style.bar_chart_container} />
+          <BarChartElement data={this.state.co2_per_country} selected_value={this.state.selected_value} className={style.bar_chart_container} />
         </div>
       </div>
     );

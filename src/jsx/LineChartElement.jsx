@@ -22,7 +22,7 @@ class LineChartElement extends Component {
           <Tooltip formatter={(value, name, props) => { 
             return [<NumberFormat value={value} displayType={'text'} thousandSeparator="," suffix={''} decimalScale={0} />, 'Tons of co2 in ' + props.payload.name] }
           }/>/>
-          <Line type="monotone" dataKey="y" stroke="#3caea3" />
+          <Line type="monotone" dataKey="y" stroke="#20639b" />
         </LineChart>
       </ResponsiveContainer>
     )

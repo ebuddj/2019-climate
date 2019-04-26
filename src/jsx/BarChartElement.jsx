@@ -6,7 +6,7 @@ import NumberFormat from 'react-number-format';
 
 // http://recharts.org/en-US
 import {
-  BarChart, Bar, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip,
+  BarChart, Bar, XAxis, YAxis, ResponsiveContainer, CartesianGrid, Tooltip, Cell
 } from 'recharts';
 
 class BarChartElement extends Component {
@@ -23,7 +23,13 @@ class BarChartElement extends Component {
           }} />
           <YAxis type="category" dataKey="name" interval={0} width={100} />
           <Tooltip formatter={(value, name, props) => { return [<NumberFormat value={value} displayType={'text'} thousandSeparator="," suffix={''} decimalScale={0}/>, 'Tons of co2 in 2017'] }} cursor={false} />
-          <Bar dataKey="x" fill="#3caea3" barSize={20} />
+          <Bar dataKey="x" barSize={20}>
+            {
+            this.props.data.map((entry, index) => {
+              return (entry.name === this.props.selected_value[0].value) ? <Cell fill="#20639b" key={index} /> : <Cell fill="#3caea3" key={index} />;
+            })
+          }
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     )
