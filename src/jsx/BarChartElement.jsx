@@ -22,11 +22,11 @@ class BarChartElement extends Component {
             return value;
           }} />
           <YAxis type="category" dataKey="name" interval={0} width={100} />
-          <Tooltip formatter={(value, name, props) => { return [<NumberFormat value={value} displayType={'text'} thousandSeparator="," suffix={''} decimalScale={0}/>, 'Tons of co2 in 2017'] }} cursor={false} />
+          <Tooltip formatter={(value, name, props) => { return [<NumberFormat value={value} displayType={'text'} thousandSeparator="," suffix={''} decimalScale={0}/>, 'Tons of ' + this.props.selected_gas_name + ' in 2017'] }} cursor={false} />
           <Bar dataKey="x" barSize={20}>
             {
             this.props.data.map((entry, index) => {
-              return (entry.name === this.props.selected_value[0].value) ? <Cell fill="#20639b" key={index} /> : <Cell fill="#3caea3" key={index} />;
+              return (entry.name === this.props.selected_country[0].value) ? <Cell fill="#20639b" key={index} /> : <Cell fill="#3caea3" key={index} />;
             })
           }
           </Bar>

@@ -32,14 +32,42 @@
     }
   }
   .select_container {
-    box-sizing: border-box;
-    font-family: 'Open Sans';
-    span {
-      font-size: 16px;
-
+    h4 {
+      font-family: 'Roboto';
+      font-size: 20px;
+      font-weight: 400;
+      font-weight: 600;
+      line-height: 26px;
+      margin: 0 0 10px 0;
     }
-    margin-bottom: 20px;
-    max-width: 100%;
+    .select_country_container {
+      box-sizing: border-box;
+      font-family: 'Open Sans';
+      margin-bottom: 20px;
+      max-width: 100%;
+      span {
+        font-size: 16px;
+      }
+    }
+    .select_gas_container {
+      margin-bottom: 20px;
+      button {
+        background-color: #fff;
+        border-radius: 0;
+        color: #000;
+        cursor: pointer;
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+        outline: none;
+        padding: 0 10px;
+        &.selected {
+          background-color: #20639b;
+          color: #fff;
+        }
+      }
+    }
   }
   .result_container {
     background-color: @resultBackground;

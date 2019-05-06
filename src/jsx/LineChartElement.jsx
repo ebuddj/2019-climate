@@ -20,7 +20,7 @@ class LineChartElement extends Component {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" interval="preserveStartEnd" />
           <Tooltip formatter={(value, name, props) => { 
-            return [<NumberFormat value={value} displayType={'text'} thousandSeparator="," suffix={''} decimalScale={0} />, 'Tons of co2 in ' + props.payload.name] }
+            return [<NumberFormat value={value} displayType={'text'} thousandSeparator="," suffix={''} decimalScale={0} />, 'Tons of ' + this.props.selected_gas_name + ' in ' + props.payload.name] }
           }/>/>
           <Line type="monotone" dataKey="y" stroke="#20639b" />
         </LineChart>

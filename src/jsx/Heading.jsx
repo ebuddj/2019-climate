@@ -9,7 +9,7 @@ class Heading extends Component {
   render() {
     return (
       <div>
-        <h1>What is the status of your country's CO2 emissions?</h1>
+        <h1>What is the status of your country's emissions?</h1>
       </div>
     );
   }

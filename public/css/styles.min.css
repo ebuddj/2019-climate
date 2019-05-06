@@ -24,14 +24,41 @@
   line-height: 24px;
   margin: 0 0 20px 0;
 }
-.app___2khK2 .select_container___2jknD {
+.app___2khK2 .select_container___2jknD h4 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0 0 10px 0;
+}
+.app___2khK2 .select_container___2jknD .select_country_container___Rz3fK {
   box-sizing: border-box;
   font-family: 'Open Sans';
   margin-bottom: 20px;
   max-width: 100%;
 }
-.app___2khK2 .select_container___2jknD span {
+.app___2khK2 .select_container___2jknD .select_country_container___Rz3fK span {
   font-size: 16px;
+}
+.app___2khK2 .select_container___2jknD .select_gas_container___3Mlal {
+  margin-bottom: 20px;
+}
+.app___2khK2 .select_container___2jknD .select_gas_container___3Mlal button {
+  background-color: #fff;
+  border-radius: 0;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 5px;
+  outline: none;
+  padding: 0 10px;
+}
+.app___2khK2 .select_container___2jknD .select_gas_container___3Mlal button.selected___3Z1JC {
+  background-color: #20639b;
+  color: #fff;
 }
 .app___2khK2 .result_container___2Lb1p {
   background-color: #f6d55c;

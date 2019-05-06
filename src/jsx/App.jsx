@@ -15,8 +15,7 @@ class App extends Component {
     super();
     
     this.state = {
-      data:[],
-      eu28_co2_total:0,
+      data:false,
       data_fetched:false,
       options:[]
     }
@@ -34,13 +33,18 @@ class App extends Component {
         'Turkey'
       ];
       countryFilter.forEach(value => {
-        delete response.data[value]
+        delete response.data['co2'][value]
+      });
+      countryFilter.forEach(value => {
+        delete response.data['methane'][value]
+      });
+      countryFilter.forEach(value => {
+        delete response.data['nitrous-oxaine'][value]
       });
       self.setState((state, props) => ({
         data:response.data,
         data_fetched:true,
-        eu28_co2_total:response.data.EU28.Total[2017],
-        options:_.map(_.keys(response.data), (el) => {
+        options:_.map(response.data.countries, (el) => {
           return {
             'label':el,
             'title':el,
@@ -59,7 +63,7 @@ class App extends Component {
       <figure className={style.app}>
         <div className={style.content}>
           <Heading />
-          <Vis data={this.state.data} options={this.state.options} data_fetched={this.state.data_fetched} eu28_co2_total={this.state.eu28_co2_total} />
+          <Vis data={this.state.data} options={this.state.options} data_fetched={this.state.data_fetched} />
         </div>
       </figure>
     );
