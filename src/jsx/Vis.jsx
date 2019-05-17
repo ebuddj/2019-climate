@@ -134,6 +134,7 @@ class Vis extends Component {
           <h4>See how other countries are doing</h4>
           <BarChartElement data={this.state.emissions_per_country} selected_country={this.state.selected_country} className={style.bar_chart_container}  selected_gas_name={this.gasses[this.state.selected_gas].label} />
         </div>
+        <p>Source: <a href="https://ec.europa.eu/eurostat/web/environment/emissions-of-greenhouse-gases-and-air-pollutants/air-emission-accounts/database">Eurostats</a></p>
       </div>
     );
   }
