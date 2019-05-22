@@ -26,12 +26,12 @@ class Vis extends Component {
         'value':'co2'
       },
       'methane':{
-        'label':'methane',
+        'label':'Methane',
         'value':'Methane'
       },
       'nitrous-oxaine':{
-        'label':'nitrous-oxaine',
-        'value':'Nitrous Oxaine'
+        'label':'Nitrous Oxaine',
+        'value':'nitrous-oxaine'
       }
     }
     this.state = {
@@ -124,7 +124,7 @@ class Vis extends Component {
         </div>
         <div className={style.result_container}>
           <h3>{this.state.selected_country[0].value}</h3>
-          <h4>This is how much {this.state.selected_gas_human} you produced in 2017</h4>
+          <h4>This is how much {this.gasses[this.state.selected_gas].label} you produced in 2017</h4>
           <CountUpElement start={this.state.emission_start} end={this.state.emission_value} />
           <p>{this.state.selected_country[0].value} makes up <span className={style.value}><NumberFormat value={(this.state.emission_value / eu28_total) * 100} displayType={'text'} thousandSeparator="," suffix={' percent'} decimalScale={0}/></span> of total {this.gasses[this.state.selected_gas].label} emissions in EU28.</p>
           <h4>This is how {this.gasses[this.state.selected_gas].label} emissions have evolved from 2008 to 2017.</h4>
