@@ -64,6 +64,7 @@ class App extends Component {
         <div className={style.content}>
           <Heading />
           <Vis data={this.state.data} options={this.state.options} data_fetched={this.state.data_fetched} />
+          <p>Source: <a href="https://ec.europa.eu/eurostat/web/environment/emissions-of-greenhouse-gases-and-air-pollutants/air-emission-accounts/database">Eurostat</a></p>
         </div>
       </figure>
     );

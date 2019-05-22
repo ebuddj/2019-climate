@@ -1,13 +1,5 @@
-@resultBackground: #f6d55c;
-@h3color: #20639b;
-@h1color: #20639b;
-@backgroundColor: #3caea3;
-
-@unused: #173f5f;
-@unused: #ed553b;
-
 .app {
-  background-color: @backgroundColor;
+  background-color: #fff;
   min-height: 100vh;
   .content {
     background-color: #fff;
@@ -16,7 +8,7 @@
     min-height: 100vh;
     padding: 20px;
     h1 {
-      color: @h1color;
+      color: #222;
       font-family: 'Roboto';
       font-size: 40px;
       font-weight: 900;
@@ -52,7 +44,8 @@
     .select_gas_container {
       margin-bottom: 20px;
       button {
-        background-color: #fff;
+        appearance: none;
+        background-color: #ccc;
         border-radius: 0;
         color: #000;
         cursor: pointer;
@@ -62,18 +55,22 @@
         margin-right: 5px;
         outline: none;
         padding: 0 10px;
+        &:hover {
+          transform: scale(1.05);
+        }
         &.selected {
-          background-color: #20639b;
+          transform: scale(1.00);
+          background-color: #333;
           color: #fff;
         }
       }
     }
   }
   .result_container {
-    background-color: @resultBackground;
+    background-color: #f5f5f5;
     padding: 20px;
     h3 {
-      color: @h3color;
+      color: #222;
       font-family: 'Roboto';
       font-size: 40px;
       font-weight: 600;
@@ -112,7 +109,6 @@
       margin-bottom: 20px;
     }
     .value {
-      color: #20639b;
       font-weight: 600;
     }
   }

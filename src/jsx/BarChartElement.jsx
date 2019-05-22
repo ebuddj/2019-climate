@@ -17,16 +17,15 @@ class BarChartElement extends Component {
     return (
       <ResponsiveContainer width="100%" height={700} className={style.bar_chart_container}>
         <BarChart data={this.props.data} layout="vertical" margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" />
           <XAxis type="number" tickFormatter={(value) => {
-            return value;
+            return value.toLocaleString();
           }} />
           <YAxis type="category" dataKey="name" interval={0} width={100} />
           <Tooltip formatter={(value, name, props) => { return [<NumberFormat value={value} displayType={'text'} thousandSeparator="," suffix={''} decimalScale={0}/>, 'Tons of ' + this.props.selected_gas_name + ' in 2017'] }} cursor={false} />
           <Bar dataKey="x" barSize={20}>
             {
             this.props.data.map((entry, index) => {
-              return (entry.name === this.props.selected_country[0].value) ? <Cell fill="#20639b" key={index} /> : <Cell fill="#3caea3" key={index} />;
+              return (entry.name === this.props.selected_country[0].value) ? <Cell fill="#333" key={index} /> : <Cell fill="#666" key={index} />;
             })
           }
           </Bar>
