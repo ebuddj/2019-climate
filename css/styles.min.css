@@ -1,5 +1,5 @@
 .app___2khK2 {
-  background-color: #3caea3;
+  background-color: #fff;
   min-height: 100vh;
 }
 .app___2khK2 .content___ITztN {
@@ -10,7 +10,7 @@
   padding: 20px;
 }
 .app___2khK2 .content___ITztN h1 {
-  color: #20639b;
+  color: #222;
   font-family: 'Roboto';
   font-size: 40px;
   font-weight: 900;
@@ -45,7 +45,8 @@
   margin-bottom: 20px;
 }
 .app___2khK2 .select_container___2jknD .select_gas_container___3Mlal button {
-  background-color: #fff;
+  appearance: none;
+  background-color: #ccc;
   border-radius: 0;
   color: #000;
   cursor: pointer;
@@ -56,16 +57,20 @@
   outline: none;
   padding: 0 10px;
 }
+.app___2khK2 .select_container___2jknD .select_gas_container___3Mlal button:hover {
+  transform: scale(1.05);
+}
 .app___2khK2 .select_container___2jknD .select_gas_container___3Mlal button.selected___3Z1JC {
-  background-color: #20639b;
+  transform: scale(1);
+  background-color: #333;
   color: #fff;
 }
 .app___2khK2 .result_container___2Lb1p {
-  background-color: #f6d55c;
+  background-color: #f5f5f5;
   padding: 20px;
 }
 .app___2khK2 .result_container___2Lb1p h3 {
-  color: #20639b;
+  color: #222;
   font-family: 'Roboto';
   font-size: 40px;
   font-weight: 600;
@@ -104,7 +109,6 @@
   margin-bottom: 20px;
 }
 .app___2khK2 .result_container___2Lb1p .value___2L5q8 {
-  color: #20639b;
   font-weight: 600;
 }
 figure,
