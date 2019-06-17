@@ -11,7 +11,7 @@ class CountUpElement extends Component {
   render() {
     return (
       <CountUp
-        decimal=","
+        decimal="."
         decimals={0}
         delay={0}
         duration={1}
