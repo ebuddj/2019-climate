@@ -6,5 +6,5 @@ This project shows the total amount of emissions (CO2, methane and Nitrous Oxain
 
 ## How to use
 
-`npm install`
-`npm start`
+* `npm install`
+* `npm start`
