@@ -44,7 +44,7 @@ class App extends Component {
       self.setState((state, props) => ({
         data:response.data,
         data_fetched:true,
-        options:_.map(response.data.countries, (el) => {
+        options:_.map(_.filter(response.data.countries, (el) => { return !_.contains(countryFilter, el); }), (el) => {
           return {
             'label':el,
             'title':el,
