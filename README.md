@@ -2,9 +2,11 @@
 
 **Live demo** https://ebuddj.github.io/2019-climate/
 
-## Climate gas emissions in Europe (EBU)
+## Climate Gas Emissions in EU28 (EBU)
 
 This project shows the total amount of emissions (CO2, methane and Nitrous Oxaine) per country and how the emissions have developed over time. There is also data of the source of emission by category. Data shows absolute values but could be also changed to relative.
+
+Ps. Data is also available for Norway, Serbia, Switzerland, Iceland and Turkey.
 
 **Sources**
 * [Eurostat](https://ec.europa.eu/eurostat/web/environment/emissions-of-greenhouse-gases-and-air-pollutants/air-emission-accounts/database)
